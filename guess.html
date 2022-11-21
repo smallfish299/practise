@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+	<head>
+		<title>猜数字</title>
+	</head>
+	<script type="text/javascript">
+		var ran = parseInt(Math.random() * 100);
+
+		function guess() {
+			var number = document.getElementById("number").value;
+			if (number < 0 || number > 100) {
+				alert("请输入1到100的实数");
+			} else if (ran == number) {
+				alert("恭喜你猜对了，你猜的数字是" + ran + "， 如果要继续游戏请重新刷新页面");
+			} else if (ran > number) {
+				alert("很遗憾，你猜小了");
+			} else if (ran < number) {
+				alert("很遗憾，你猜大了");
+			}
+		}
+	</script>
+
+	<body>
+		请输入1到100的实数：
+		<input type="text" name="number" id="number">
+		<button type="button" onclick="guess()">提交</button>
+	</body>
+
+</html>

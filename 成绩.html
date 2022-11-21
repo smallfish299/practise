@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script type="text/javascript">
+			function name() {
+				var n = f1.text.value;
+				f1.text1.value = n;
+			}
+
+			function peace() {
+				name();
+				var grade = new Array();
+				grade[0] = f1.grade1.value;
+				grade[1] = f1.grade1.value;
+				grade[2] = f1.grade1.value;
+				grade[3] = f1.grade1.value;
+				grade[4] = f1.grade1.value;
+				grade.map(Number);
+				var sum = (parseInt(grade[0]) + parseInt(grade[1]) + parseInt(grade[2]) + parseInt(grade[3]) + parseInt(grade[4])) / 5;
+				f1.total1.value = sum;
+				switch (true) {
+					case sum >= 90:
+						alert('A')
+						break;
+					case sum < 90 && sum >= 80:
+						alert('B');
+						break;
+					case sum < 80 && sum >= 70:
+						alert('C');
+						break;
+					case sum < 70 && sum >= 60:
+						alert('D')
+						break;
+					case sum < 60:
+						alert('E')
+						break;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<form name="f1">
+			请输入姓名：<input type="text" name="text" value="" /><br /> 请输入语文成绩：
+			<input type="text" name="grade1" value="" /><br /> 请输入英语成绩：
+			<input type="text" name="grade2" value="" /><br /> 请输入历史成绩：
+			<input type="text" name="grade3" value="" /><br /> 请输入化学成绩：
+			<input type="text" name="grade4" value="" /><br /> 请输入数学成绩：
+			<input type="text" name="grade5" value="" /><br /> 姓名为：
+			<input type="text" name="text1" value="" /><br />
+			<input type="button" onclick="peace()" value="计算平均分" /> 平均成绩：
+			<input type="text" name="total1" value="" /><br />
+
+		</form>
+	</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function Fac() {
+				var n = f1.fac1.value;
+				var i = 1;
+				var result = 1;
+				for (i = n; i >= 1; i--) {
+					result = result * i;
+				}
+				f1.fac2.value = result;
+			}
+		</script>
+	</head>
+	<body>
+		<form name="f1">
+			请输入你想要计算的数:<input type="text" name="fac1" value="" /><br />
+			<input type="button" onclick="Fac()" value="计算" /> <br />结果是：
+			<input type="text" name="fac2" value="" />
+		</form>
+	</body>
+
+</html>
+
